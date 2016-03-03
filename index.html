@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adobe App</title>
+    
+    <!--angular material theme-->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0-rc1/angular-material.min.css">
+    
+    <!--Default application stylesheet-->
+    <link rel =stylesheet href="css/default.css">
+    
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+  
+  </head>  
+  <body>
+  <div ui-view></div>
+    <script src="js/libs/jquery.js"></script>
+    <script src="js/libs/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.0/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-sanitize.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0-rc1/angular-material.min.js"></script>
+    <script type="text/javascript" src="js/libs/angular-ui-router.min.js"></script>
+	<script>
+	 		$script(['js/app.js'], function()
+			{
+			    angular.bootstrap(document, ['adobeApp']);
+			})
+	</script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+.row{
+    display: flex;
+}
+body{
+    font-family: 'Ubuntu';
+}
+a{
+    text-decoration: none;
+    color: #61C2D9;
+    display: block;
+}
+  p{
+         min-height: 50px;
+      max-height: 100px;
+    overflow: hidden;
+}
+.fixedHeight{
+    height: 4.75rem;
+}
+ .headertext{
+        font-size: 1rem;
+        overflow: hidden; 
+ }
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;  
+}
+.borders{
+     padding: 0 1rem;
+        border-bottom: 1px solid #525252;
+}
+@media ( min-width : 1200px ) {
+    .headertext{
+        font-size: 1.5rem;
+    }
+    .borders{
+        padding: 1rem;
+        min-height: 450px;
+        border-bottom: 1px solid #525252;
+        border-right: 1px solid #525252;
+    }
+  
+}

@@ -1,0 +1,41 @@
+<md-toolbar class="md-toolbar-tools md-theme-indigo">
+        <h1 class="md-toolbar-tools">Adobe Assignment - detail story report</h1>
+</md-toolbar>
+ <md-content>
+     <iframe id="frame" style="display:none"></iframe>
+      <md-subheader class="md-primary">Detailed story of {{detailedInformation.author.first_name}},
+     {{detailedInformation.author.last_name}}
+      </md-subheader>
+     <md-content flex layout-padding>
+       <article ng-bind-html="parseHtmltoview(detailedInformation.excerpt)"></article>
+     </md-content>
+     
+   <md-content flex layout-padding>
+       <article ng-bind-html="parseHtmltoview(detailedInformation.content)"></article>
+   </md-content>
+     <md-subheader class="md-primary">Categories
+     </md-subheader>
+    <md-chips ng-model="categories" readonly=true>
+      <md-chip-template>
+        <strong>{{$chip.name}}</strong>
+        <em>{{$chip.post_count}}</em>  
+      </md-chip-template>
+    </md-chips>
+     <md-subheader class="md-primary">Tags
+     </md-subheader>
+    <md-chips ng-model="tags" readonly=true>
+      <md-chip-template>
+        <strong>{{$chip.name}}</strong>
+        <em>{{$chip.post_count}}</em>  
+      </md-chip-template>
+    </md-chips>
+     <md-subheader class="md-primary">Attachments
+     </md-subheader>
+     <div layout="row"  layout-align="center" 
+           layout-wrap layout-fill >
+         <a ng-repeat ="items in attachments"
+            href="{{items.URL}}" download>
+         <img src="{{items.URL}}" width=100px height="100px"></a>
+     </div>
+        
+</md-content>

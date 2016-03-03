@@ -1,0 +1,39 @@
+<md-toolbar class="md-toolbar-tools md-theme-indigo">
+        <h1 class="md-toolbar-tools">Adobe Assignment</h1>
+</md-toolbar>
+ <md-content>
+     <section layout="row" layout-align="center" 
+           layout-wrap layout-fill 
+           style="align-items: center;
+                  border-bottom:1px solid rgba(238, 238, 238, 0.14);
+                  margin-bottom:10px;">
+               <div class="borders"   ng-repeat="item in userInformation" 
+                    flex-sm="100" flex-md="50"  flex-gt-md="25"  >
+                  <header style="color: #FB6434;"class="headertext line-clamp">
+                       <span ng-bind-html="parseHtmltoview(item.title)"></span>           
+                  </header>   
+                  <section layout="row" layout-wrap layout-fill >
+                   <div flex-sm="100" flex-md=33>
+                          <img alt ="Image" src="{{item.author.avatar_URL}}"></img>
+                          <a target ="_blank" href="{{item.author.profile_URL}}">
+                              {{item.author.nice_name}}
+                         </a>
+                   </div>
+                   <div flex-sm="100" flex-md=33>
+                       <article class="headertext">
+                             <span>{{item.author.first_name}} , </span>
+                             <span>{{item.author.last_name}}    </span>
+                       </article>
+                   </div>
+                  </section> 
+                  <footer>
+                         <article  class=line-clamp 
+                               ng-bind-html="parseHtmltoview(item.excerpt)">
+                         </article>
+                         <md-button ng-click="fullStory(item.ID)" class="md-raised md-primary">Full Story</md-button>
+                  </footer>
+               </div>
+               <md-button ng-click="addRows()" class="md-raised  md-warn">More Data</md-button>
+     </section>
+
+</md-content>
